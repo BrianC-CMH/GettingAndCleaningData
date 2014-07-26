@@ -8,16 +8,13 @@
 
 Following data transformations are carried out by the `run_analysis.R` script.
 
-1. For each of the training and test datasets, 
-    1. Read the `X` values
-    2. Take a subset of the columns representing only the mean and standard deviation values. Subsetting is done early on to conserve memory.
-    3. Associate additional columns to represent activity IDs and subject IDs read from `y_<dataset>.txt` and `subject_<dataset>.txt` files respectively.
-    4. Assign column names by manipulating the measurement names in `features.txt` to remove spaces and convert them to camel case.
-2. Merge the training and the test sets, read as in step 1 to create one data set.
-3. Associate an additional column with descriptive activity names as specified in `activity_labels.txt`.
-4. Melt the dataset by specifying activity ID, name and subject ID as the only ID variables.
-5. Re cast the melted dataset with activity name and subject id as the only IDs and `mean` as the aggregator function.
-6. Save the result in re-casted dataset as `tidy.txt`
+1. For each of the training and test datasets: 
+    1. Read the `X` values.
+    2. Read the 'Y' values.
+    3. Append activity label.
+    4. Merge X&Y data sets.
+2. Take master data set and retain only columns that contain the mean and standard deviation values.
+3. Save the result clean data set as `tidy.txt`
 
 
 ### Variable Descriptions
@@ -38,71 +35,69 @@ The set of variables that were estimated from these signals are:
 
 #### Data Columns
 
-1. **ActivityName**: Activity being performed
-2. **SubjectID**: ID indicating the subject from whom data was collected
-3. tBodyAccMeanX
-4. tBodyAccMeanY
-5. tBodyAccMeanZ
-6. tBodyAccStdX
-7. tBodyAccStdY
-8. tBodyAccStdZ
-9. tGravityAccMeanX
-10. tGravityAccMeanY
-11. tGravityAccMeanZ
-12. tGravityAccStdX
-13. tGravityAccStdY
-14. tGravityAccStdZ
-15. tBodyAccJerkMeanX
-16. tBodyAccJerkMeanY
-17. tBodyAccJerkMeanZ
-18. tBodyAccJerkStdX
-19. tBodyAccJerkStdY
-20. tBodyAccJerkStdZ
-21. tBodyGyroMeanX
-22. tBodyGyroMeanY
-23. tBodyGyroMeanZ
-24. tBodyGyroStdX
-25. tBodyGyroStdY
-26. tBodyGyroStdZ
-27. tBodyGyroJerkMeanX
-28. tBodyGyroJerkMeanY
-29. tBodyGyroJerkMeanZ
-30. tBodyGyroJerkStdX
-31. tBodyGyroJerkStdY
-32. tBodyGyroJerkStdZ
-33. tBodyAccMagMean
-34. tBodyAccMagStd
-35. tGravityAccMagMean
-36. tGravityAccMagStd
-37. tBodyAccJerkMagMean
-38. tBodyAccJerkMagStd
-39. tBodyGyroMagMean
-40. tBodyGyroMagStd
-41. tBodyGyroJerkMagMean
-42. tBodyGyroJerkMagStd
-43. fBodyAccMeanX
-44. fBodyAccMeanY
-45. fBodyAccMeanZ
-46. fBodyAccStdX
-47. fBodyAccStdY
-48. fBodyAccStdZ
-49. fBodyAccJerkMeanX
-50. fBodyAccJerkMeanY
-51. fBodyAccJerkMeanZ
-52. fBodyAccJerkStdX
-53. fBodyAccJerkStdY
-54. fBodyAccJerkStdZ
-55. fBodyGyroMeanX
-56. fBodyGyroMeanY
-57. fBodyGyroMeanZ
-58. fBodyGyroStdX
-59. fBodyGyroStdY
-60. fBodyGyroStdZ
-61. fBodyAccMagMean
-62. fBodyAccMagStd
-63. fBodyBodyAccJerkMagMean
-64. fBodyBodyAccJerkMagStd
-65. fBodyBodyGyroMagMean
-66. fBodyBodyGyroMagStd
-67. fBodyBodyGyroJerkMagMean
-68. fBodyBodyGyroJerkMagStd
+Subject: ID indicating the subject from whom data was collected
+Activity: Activity being performed
+Time.Body.Acceleration..Mean.X
+Time.Body.Acceleration..Mean.Y
+Time.Body.Acceleration..Mean.Z
+Time.Gravity.Acceleration..Mean.X
+Time.Gravity.Acceleration..Mean.Y
+Time.Gravity.Acceleration..Mean.Z
+Time.Body.Acceleration.Jerk.Mean.X
+Time.Body.Acceleration.Jerk.Mean.Y
+Time.Body.Acceleration.Jerk.Mean.Z
+Time.BodyGyro.Mean.X
+Time.BodyGyro.Mean.Y
+Time.BodyGyro.Mean.Z
+Time.BodyGyroJerk.Mean.X
+Time.BodyGyroJerk.Mean.Y
+Time.BodyGyroJerk.Mean.Z
+FFT.Body.Acceleration..Mean.X
+FFT.Body.Acceleration..Mean.Y
+FFT.Body.Acceleration..Mean.Z
+FFT.Body.Acceleration.Jerk.Mean.X
+FFT.Body.Acceleration.Jerk.Mean.Y
+FFT.Body.Acceleration.Jerk.Mean.Z
+FFT.BodyGyro.Mean.X
+FFT.BodyGyro.Mean.Y
+FFT.BodyGyro.Mean.Z
+angle(Time.Body.Acceleration.Mean,gravity)
+angle(Time.Body.Acceleration.JerkMean),gravityMean)
+angle(Time.BodyGyroMean,gravityMean)
+angle(Time.BodyGyroJerkMean,gravityMean)
+angle(X,gravityMean)
+angle(Y,gravityMean)
+angle(Z,gravityMean)
+Time.Body.Acceleration..Std.X
+Time.Body.Acceleration..Std.Y
+Time.Body.Acceleration..Std.Z
+Time.Gravity.Acceleration..Std.X
+Time.Gravity.Acceleration..Std.Y
+Time.Gravity.Acceleration..Std.Z
+Time.Body.Acceleration.Jerk.Std.X
+Time.Body.Acceleration.Jerk.Std.Y
+Time.Body.Acceleration.Jerk.Std.Z
+Time.BodyGyro.Std.X
+Time.BodyGyro.Std.Y
+Time.BodyGyro.Std.Z
+Time.BodyGyroJerk.Std.X
+Time.BodyGyroJerk.Std.Y
+Time.BodyGyroJerk.Std.Z
+Time.Body.Acceleration.Mag.Std
+Time.Gravity.Acceleration.Mag.Std
+Time.Body.Acceleration.JerkMag.Std
+Time.BodyGyroMag.Std
+Time.BodyGyroJerkMag.Std
+FFT.Body.Acceleration..Std.X
+FFT.Body.Acceleration..Std.Y
+FFT.Body.Acceleration..Std.Z
+FFT.Body.Acceleration.Jerk.Std.X
+FFT.Body.Acceleration.Jerk.Std.Y
+FFT.Body.Acceleration.Jerk.Std.Z
+FFT.BodyGyro.Std.X
+FFT.BodyGyro.Std.Y
+FFT.BodyGyro.Std.Z
+FFT.Body.Acceleration.Mag.Std
+FFT.BodyBody.Acceleration.JerkMag.Std
+FFT.BodyBodyGyroMag.Std
+FFT.BodyBodyGyroJerkMag.Std
