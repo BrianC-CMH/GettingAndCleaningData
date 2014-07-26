@@ -35,69 +35,69 @@ The set of variables that were estimated from these signals are:
 
 #### Data Columns
 
-Subject: ID indicating the subject from whom data was collected
-Activity: Activity being performed
-Time.Body.Acceleration..Mean.X
-Time.Body.Acceleration..Mean.Y
-Time.Body.Acceleration..Mean.Z
-Time.Gravity.Acceleration..Mean.X
-Time.Gravity.Acceleration..Mean.Y
-Time.Gravity.Acceleration..Mean.Z
-Time.Body.Acceleration.Jerk.Mean.X
-Time.Body.Acceleration.Jerk.Mean.Y
-Time.Body.Acceleration.Jerk.Mean.Z
-Time.BodyGyro.Mean.X
-Time.BodyGyro.Mean.Y
-Time.BodyGyro.Mean.Z
-Time.BodyGyroJerk.Mean.X
-Time.BodyGyroJerk.Mean.Y
-Time.BodyGyroJerk.Mean.Z
-FFT.Body.Acceleration..Mean.X
-FFT.Body.Acceleration..Mean.Y
-FFT.Body.Acceleration..Mean.Z
-FFT.Body.Acceleration.Jerk.Mean.X
-FFT.Body.Acceleration.Jerk.Mean.Y
-FFT.Body.Acceleration.Jerk.Mean.Z
-FFT.BodyGyro.Mean.X
-FFT.BodyGyro.Mean.Y
-FFT.BodyGyro.Mean.Z
-angle(Time.Body.Acceleration.Mean,gravity)
-angle(Time.Body.Acceleration.JerkMean),gravityMean)
-angle(Time.BodyGyroMean,gravityMean)
-angle(Time.BodyGyroJerkMean,gravityMean)
-angle(X,gravityMean)
-angle(Y,gravityMean)
-angle(Z,gravityMean)
-Time.Body.Acceleration..Std.X
-Time.Body.Acceleration..Std.Y
-Time.Body.Acceleration..Std.Z
-Time.Gravity.Acceleration..Std.X
-Time.Gravity.Acceleration..Std.Y
-Time.Gravity.Acceleration..Std.Z
-Time.Body.Acceleration.Jerk.Std.X
-Time.Body.Acceleration.Jerk.Std.Y
-Time.Body.Acceleration.Jerk.Std.Z
-Time.BodyGyro.Std.X
-Time.BodyGyro.Std.Y
-Time.BodyGyro.Std.Z
-Time.BodyGyroJerk.Std.X
-Time.BodyGyroJerk.Std.Y
-Time.BodyGyroJerk.Std.Z
-Time.Body.Acceleration.Mag.Std
-Time.Gravity.Acceleration.Mag.Std
-Time.Body.Acceleration.JerkMag.Std
-Time.BodyGyroMag.Std
-Time.BodyGyroJerkMag.Std
-FFT.Body.Acceleration..Std.X
-FFT.Body.Acceleration..Std.Y
-FFT.Body.Acceleration..Std.Z
-FFT.Body.Acceleration.Jerk.Std.X
-FFT.Body.Acceleration.Jerk.Std.Y
-FFT.Body.Acceleration.Jerk.Std.Z
-FFT.BodyGyro.Std.X
-FFT.BodyGyro.Std.Y
-FFT.BodyGyro.Std.Z
-FFT.Body.Acceleration.Mag.Std
-FFT.BodyBody.Acceleration.JerkMag.Std
-FFT.BodyBodyGyroMag.Std
-FFT.BodyBodyGyroJerkMag.Std
+- Subject: ID indicating the subject from whom data was collected
+- Activity: Activity being performed
+- Time.Body.Acceleration..Mean.X
+- Time.Body.Acceleration..Mean.Y
+- Time.Body.Acceleration..Mean.Z
+- Time.Gravity.Acceleration..Mean.X
+- Time.Gravity.Acceleration..Mean.Y
+- Time.Gravity.Acceleration..Mean.Z
+- Time.Body.Acceleration.Jerk.Mean.X
+- Time.Body.Acceleration.Jerk.Mean.Y
+- Time.Body.Acceleration.Jerk.Mean.Z
+- Time.BodyGyro.Mean.X
+- Time.BodyGyro.Mean.Y
+- Time.BodyGyro.Mean.Z
+- Time.BodyGyroJerk.Mean.X
+- Time.BodyGyroJerk.Mean.Y
+- Time.BodyGyroJerk.Mean.Z
+- FFT.Body.Acceleration..Mean.X
+- FFT.Body.Acceleration..Mean.Y
+- FFT.Body.Acceleration..Mean.Z
+- FFT.Body.Acceleration.Jerk.Mean.X
+- FFT.Body.Acceleration.Jerk.Mean.Y
+- FFT.Body.Acceleration.Jerk.Mean.Z
+- FFT.BodyGyro.Mean.X
+- FFT.BodyGyro.Mean.Y
+- FFT.BodyGyro.Mean.Z
+- angle(Time.Body.Acceleration.Mean,gravity)
+- angle(Time.Body.Acceleration.JerkMean),gravityMean)
+- angle(Time.BodyGyroMean,gravityMean)
+- angle(Time.BodyGyroJerkMean,gravityMean)
+- angle(X,gravityMean)
+- angle(Y,gravityMean)
+- angle(Z,gravityMean)
+- Time.Body.Acceleration..Std.X
+- Time.Body.Acceleration..Std.Y
+- Time.Body.Acceleration..Std.Z
+- Time.Gravity.Acceleration..Std.X
+- Time.Gravity.Acceleration..Std.Y
+- Time.Gravity.Acceleration..Std.Z
+- Time.Body.Acceleration.Jerk.Std.X
+- Time.Body.Acceleration.Jerk.Std.Y
+- Time.Body.Acceleration.Jerk.Std.Z
+- Time.BodyGyro.Std.X
+- Time.BodyGyro.Std.Y
+- Time.BodyGyro.Std.Z
+- Time.BodyGyroJerk.Std.X
+- Time.BodyGyroJerk.Std.Y
+- Time.BodyGyroJerk.Std.Z
+- Time.Body.Acceleration.Mag.Std
+- Time.Gravity.Acceleration.Mag.Std
+- Time.Body.Acceleration.JerkMag.Std
+- Time.BodyGyroMag.Std
+- Time.BodyGyroJerkMag.Std
+- FFT.Body.Acceleration..Std.X
+- FFT.Body.Acceleration..Std.Y
+- FFT.Body.Acceleration..Std.Z
+- FFT.Body.Acceleration.Jerk.Std.X
+- FFT.Body.Acceleration.Jerk.Std.Y
+- FFT.Body.Acceleration.Jerk.Std.Z
+- FFT.BodyGyro.Std.X
+- FFT.BodyGyro.Std.Y
+- FFT.BodyGyro.Std.Z
+- FFT.Body.Acceleration.Mag.Std
+- FFT.BodyBody.Acceleration.JerkMag.Std
+- FFT.BodyBodyGyroMag.Std
+- FFT.BodyBodyGyroJerkMag.Std
